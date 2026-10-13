@@ -1,0 +1,55 @@
+{
+  "name": "Ground Turnaround Operations",
+  "dataColors": [
+    "#2878A8",
+    "#0B9B91",
+    "#D18A35",
+    "#BD4B48",
+    "#6F7DB5",
+    "#4F8C68",
+    "#8D6CAB"
+  ],
+  "background": "#F3F6F9",
+  "foreground": "#26384B",
+  "tableAccent": "#0B9B91",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "show": true,
+            "fontFamily": "Aptos Display",
+            "fontSize": 13,
+            "fontColor": {
+              "solid": {
+                "color": "#14243A"
+              }
+            }
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#DFE7EE"
+              }
+            },
+            "radius": 8
+          }
+        ]
+      }
+    }
+  }
+}

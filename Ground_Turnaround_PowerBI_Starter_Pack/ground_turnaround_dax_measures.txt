@@ -1,0 +1,40 @@
+-- Rename the imported table to Turnaround before creating these measures.
+Flights Analysed = COUNTROWS(Turnaround)
+
+Average Turnaround Variance (min) =
+AVERAGE(Turnaround[turnaround_variance_min])
+
+SLA Breach Flights =
+CALCULATE(
+    COUNTROWS(Turnaround),
+    Turnaround[sla_breach_flag] = 1
+)
+
+SLA Breach Rate =
+DIVIDE([SLA Breach Flights], [Flights Analysed], 0)
+
+OTP Flights =
+CALCULATE(
+    COUNTROWS(Turnaround),
+    Turnaround[departure_delay_min] <= 15
+)
+
+OTP Rate =
+DIVIDE([OTP Flights], [Flights Analysed], 0)
+
+Average Departure Delay (min) =
+AVERAGE(Turnaround[departure_delay_min])
+
+Average Actual Turnaround (min) =
+AVERAGE(Turnaround[actual_turnaround_min])
+
+Average Planned Turnaround (min) =
+AVERAGE(Turnaround[planned_turnaround_min])
+
+-- Use this only as a synthetic proxy, not validated savings:
+Synthetic Delay Cost Proxy (INR) =
+SUM(Turnaround[estimated_delay_cost_inr])
+
+-- Suggested formatting:
+-- SLA Breach Rate, OTP Rate: Percentage, 1 decimal place
+-- Turnaround/departure metrics: Decimal, 1 decimal place
