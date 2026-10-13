@@ -1,27 +1,41 @@
 # Ground Turnaround Performance Dashboard
 
-Airline operations analytics portfolio project built with Python, Streamlit, Pandas, and Plotly using 1,500 simulated flight-turnaround records.
+An airline operations analytics portfolio project built with **Python, Streamlit, Pandas, and Plotly**, using 1,500 simulated flight-turnaround records.
 
-## View the dashboard
+## View the Dashboard
 
-**[Open the Live Interactive Dashboard](https://ground-turnaround-performance-analysis.streamlit.app/)**
+- **[Launch Live Interactive Dashboard](https://ground-turnaround-performance-analysis.streamlit.app/)**
+- **[View HTML Dashboard Preview](https://vikrantthenge.github.io/ground-turnaround-performance-analysis/Dashboard_Preview.html)**
 
-The dashboard explores turnaround variance, SLA compliance, on-time performance, and station-level trends using simulated data.
+## Project Overview
 
-## Dashboard preview
+An interactive operations dashboard designed to monitor airline ground turnaround performance, identify SLA breaches, and compare operational KPIs across stations, ground handlers, and scheduled time bands.
 
-A standalone HTML preview is included in this repository as `Dashboard_Preview.html`. GitHub's file viewer may display the HTML source code rather than render it as a dashboard. To view it as a webpage, publish the repository with GitHub Pages and open the published Pages URL.
+## Key Performance Indicators
 
-## What this project demonstrates
+The following figures are calculated from the simulated dataset:
 
-- Operational KPI monitoring and performance reporting
-- Comparison by station, ground handler, and scheduled time band
-- Interactive filters and management-oriented investigation prompts
+- **Flight records analysed:** 1,500
+- **SLA breach rate:** Approximately 45.7%
+- **On-time performance (OTP):** Approximately 74.7%
+- **Average turnaround variance:** +10.1 minutes
 
-## Data note
+## What the Dashboard Demonstrates
 
-All 1,500 records and findings are simulated for portfolio demonstration. They do not represent actual airline performance or verified cost savings. The HTML preview is a standalone webpage, not a native Power BI `.pbix` file.
+- Monitoring turnaround variance and SLA compliance
+- Tracking on-time performance and departure delays
+- Comparing performance across stations and ground handlers
+- Filtering operational results by station, handler, and time band
+- Presenting performance indicators to support operational investigation and decision-making
 
-## Technology
+## Technology Stack
 
 Python · Streamlit · Pandas · Plotly · CSV
+
+## Data Disclaimer
+
+All 1,500 records and reported results are simulated for portfolio demonstration. They do not represent actual airline performance, verified operational improvements, or cost savings.
+
+The SLA and OTP definitions are assumptions used for this exercise and should not be interpreted as official airline-wide standards.
+
+The HTML file is a standalone dashboard preview, not a native Power BI `.pbix` file.
