@@ -299,3 +299,33 @@ st.download_button(
     file_name="filtered_ground_turnaround_records.csv",
     mime="text/csv",
 )
+
+
+# Creator attribution
+st.divider()
+st.markdown(
+    """
+    <div style="text-align:center; padding: 0.6rem 0 0.2rem 0;">
+        <div style="font-weight:600; font-size:0.95rem; color:#334155;">
+            Built by Vikrant Thenge
+        </div>
+        <div style="margin-top:0.35rem; font-size:0.88rem;">
+            <a href="https://www.linkedin.com/in/vthenge"
+               target="_blank" rel="noopener noreferrer"
+               style="text-decoration:none; margin:0 0.5rem;">
+                LinkedIn ↗
+            </a>
+            <span style="color:#94a3b8;">|</span>
+            <a href="https://github.com/Vikrantthenge"
+               target="_blank" rel="noopener noreferrer"
+               style="text-decoration:none; margin:0 0.5rem;">
+                GitHub ↗
+            </a>
+        </div>
+        <div style="margin-top:0.35rem; font-size:0.78rem; color:#64748b;">
+            Airline Operations · Performance Analytics
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
