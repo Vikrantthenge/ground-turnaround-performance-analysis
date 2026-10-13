@@ -1,0 +1,22 @@
+field,definition,unit_or_type
+flight_id,Unique simulated flight-turnaround identifier,Identifier
+operation_date,"Date of operation, spanning 90 days",Date
+station,Airport station code,Category
+handler,Ground-handling provider label,Category
+aircraft_type,Aircraft family,Category
+time_band,Broad local operating time band,Category
+planned_turnaround_min,Planned turnaround duration in minutes,Minutes
+actual_turnaround_min,Observed/simulated turnaround duration in minutes,Minutes
+turnaround_variance_min,Actual minus planned turnaround duration,Minutes; positive is over plan
+late_inbound_min,"Inbound lateness at arrival, capped at 45 minutes",Minutes
+adverse_weather_flag,"1 if adverse weather condition is simulated, else 0",Binary flag
+staff_shortage_flag,"1 if a staffing shortage is simulated, else 0",Binary flag
+equipment_delay_flag,"1 if ground equipment delay is simulated, else 0",Binary flag
+catering_delay_flag,"1 if catering delay is simulated, else 0",Binary flag
+baggage_delay_flag,"1 if baggage handling delay is simulated, else 0",Binary flag
+maintenance_check_flag,"1 if an additional maintenance check is simulated, else 0",Binary flag
+sla_target_min,Illustrative SLA threshold: planned turnaround + 10 minutes,Minutes
+sla_breach_flag,"1 if actual turnaround exceeds the illustrative SLA target, else 0",Binary flag
+departure_delay_min,"Simulated departure delay minutes, incorporating turnaround and inbound delay",Minutes
+otp_status,On time if departure delay is 15 minutes or less; otherwise delayed,Category
+estimated_delay_cost_inr,Illustrative cost proxy calculated per delay minute; not actual airline cost,"INR, synthetic estimate"
