@@ -13,7 +13,7 @@ HTML dashboard preview and Power BI starter files.
 -   **Live Streamlit dashboard:** [Open the interactive
     application](https://ground-turnaround-performance-analysis.streamlit.app/)
 -   **Standalone HTML preview:** [Open
-    `dashboard-preview.html`](./Dashboard-preview.html)
+    `Dashboard-preview.html`](./Dashboard-preview.html)
 
 The Streamlit application is the primary live demo. The HTML file is a
 separate, standalone preview; it is **not** a native Power BI `.pbix`
