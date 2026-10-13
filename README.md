@@ -1,151 +1,70 @@
-# Ground Turnaround Performance Analysis
+# Ground Turnaround Performance Dashboard
 
-An interactive airline operations analytics portfolio project built with
-**Python, Streamlit, Pandas, and Plotly**, supported by a standalone
-HTML dashboard preview and Power BI starter files.
+An airline operations analytics portfolio project built with **Python,
+Streamlit, Pandas, and Plotly**, using a simulated dataset of 1,500
+flight-turnaround records.
 
-> **Important data note:** The dataset is simulated and is not sourced
-> from a real airline. Findings are illustrative, not verified
-> operational results or proven cost savings.
+## View the dashboards
 
-## Explore the dashboards
+-   **Live interactive application:**
+    <https://ground-turnaround-performance-analysis.streamlit.app/>
+-   **Standalone dashboard preview:** [Open
+    Dashboard_Preview.html](./Dashboard_Preview.html)
 
--   **Live Streamlit dashboard:** [Open the interactive
-    application](https://ground-turnaround-performance-analysis.streamlit.app/)
--   **Standalone HTML preview:** [View Interactive Dashboard Preview(file:///C:/Users/india/Downloads/Ground_Turnaround_PowerBI_Starter_Pack/Dashboard_Preview.html)
+> **Data note:** The records and results are simulated for portfolio
+> demonstration. They do not represent actual airline performance or
+> verified cost savings. The HTML file is a standalone dashboard
+> preview, not a native Power BI `.pbix` file.
 
-The Streamlit application is the primary live demo. The HTML file is a
-separate, standalone preview; it is **not** a native Power BI `.pbix`
-report. If the HTML file in your repository has a different filename or
-is inside a subfolder, update the link above to match its actual GitHub
-path.
+## What the project demonstrates
 
-## Business objective
-
-Demonstrate how an operations leader can use performance data to monitor
-ground turnaround, identify where SLA breaches are concentrated, compare
-station and ground-handler performance, and prioritise operational
-investigation.
-
-## Dashboard features
-
--   KPI cards for flight volume, SLA breach rate, on-time performance,
-    average turnaround variance, and average departure delay.
--   Interactive filtering by date, station, ground handler, and time
-    band.
--   Comparative charts for station, time-band, and handler performance.
--   Daily performance trend.
--   Station performance summary table.
--   Descriptive comparisons of delay-driver flags to support further
+-   Monitoring of turnaround variance, SLA breach rate, on-time
+    performance, and departure delay.
+-   Comparisons across stations, ground handlers, and scheduled time
+    bands.
+-   Interactive filtering and management-focused prompts for further
     investigation.
--   Download of filtered records from the Streamlit app.
+-   Translating operational measures into clear performance reporting.
 
-## Dataset and KPI definitions
+## Key figures in the simulated dataset
 
-The exercise uses 1,500 simulated turnaround records.
+-   **Records:** 1,500
+-   **SLA breach rate:** approximately 45.7%
+-   **On-time performance:** approximately 74.7%
+-   **Average turnaround variance:** approximately +10.1 minutes
 
--   **Turnaround variance:** actual turnaround minus planned turnaround,
-    in minutes.
--   **SLA breach rate:** share of records where `sla_breach_flag = 1`,
-    according to the simulated source definition.
--   **On-time performance:** share of records whose `otp_status` is
-    `On time`.
--   **Average departure delay:** average of `departure_delay_min` for
-    the selected records.
-
-The synthetic SLA target uses planned turnaround plus a 10-minute
-tolerance. The source OTP label uses a departure-delay threshold of 15
-minutes. These are exercise assumptions, not official airline-wide
-standards.
-
-## Key analytical observations
-
-In the full simulated dataset, the overall SLA breach rate is
-approximately **45.7%**, on-time performance is **74.7%**, and average
-turnaround variance is approximately **+10.1 minutes**. These figures
-describe only the synthetic dataset and must not be presented as actual
-airline performance.
-
-The dashboard helps identify segments for investigation. It does not
-prove that a station, handler, time band, or delay flag caused a result.
+These are descriptive results from the synthetic dataset only. They
+should not be presented as actual airline results. Differences between
+stations, handlers, or time bands do not establish cause and effect.
 
 ## Technology
 
--   Python
--   Streamlit
--   Pandas
--   Plotly
--   CSV-based simulated data
--   Optional Power BI supporting assets: DAX measures and theme JSON
+Python · Streamlit · Pandas · Plotly · CSV
 
 ## Run locally
 
-1.  Install Python 3.10 or later.
+Install Python 3.10 or later, then run these commands from the project
+folder:
 
-2.  Open a terminal in the repository folder.
-
-3.  Create and activate a virtual environment (recommended):
-
-    ``` bash
-    py -m venv .venv
-    .venv\\Scripts\\activate
-    ```
-
-4.  Install dependencies:
-
-    ``` bash
-    pip install -r requirements.txt
-    ```
-
-5.  Start the application:
-
-    ``` bash
-    python -m streamlit run app.py
-    ```
-
-Keep the dataset in the `data/` folder as expected by `app.py`.
-
-## Suggested repository structure
-
-``` text
-ground-turnaround-performance-analysis/
-├── app.py
-├── requirements.txt
-├── README.md
-├── Dashboard-preview.html
-└── data/
-    ├── ground_turnaround_simulated_dataset.csv
-    └── ground_turnaround_data_dictionary.csv
+``` bash
+py -m venv .venv
+.venv\\Scripts\\activate
+pip install -r requirements.txt
+python -m streamlit run app.py
 ```
 
-If you have included additional files such as the Power BI theme, DAX
-measures, or case-study presentation, keep them in the repository and
-add links to them here.
+The dataset should remain in the `data/` folder as expected by `app.py`.
 
-## Analytical limitations
-
--   All records are simulated; results are not operational evidence.
--   Delay-driver flags can overlap. Flagged-vs-unflagged comparisons are
-    descriptive associations, not proof of causation.
--   Station and handler comparisons can be affected by flight mix,
-    aircraft type, weather, traffic, staffing, and other operating
-    conditions.
--   Do not describe the synthetic estimated delay-cost field as realised
-    savings.
--   Validate data definitions, timestamps, sample sizes, and operational
-    context before using any analysis for real decisions.
-
-## Portfolio summary
+## Resume-ready summary
 
 **Ground Turnaround Performance Dashboard \| Python, Streamlit, Pandas,
 Plotly**
 
-Developed an interactive operations dashboard using 1,500 simulated
-flight-turnaround records to monitor SLA adherence, turnaround variance,
-on-time performance, and station-level trends. Implemented filters,
-comparative visualisations, trend monitoring, downloadable records, and
+Developed and deployed an interactive operations dashboard using 1,500
+simulated flight-turnaround records to monitor SLA compliance,
+turnaround variance, on-time performance, and station-level trends.
+Added interactive filters, comparative visualisations, and
 management-oriented investigation prompts.
 
--   Live application:
-    https://ground-turnaround-performance-analysis.streamlit.app/
--   HTML preview: `dashboard-preview.html` in this repository.
+**Live demo:**
+https://ground-turnaround-performance-analysis.streamlit.app/
